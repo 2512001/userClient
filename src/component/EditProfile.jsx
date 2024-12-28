@@ -19,6 +19,9 @@ const EditProfile = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if(!email || !password){
+      return;
+    }
     try {
       let res = await axios.put(`${api}/${user._id}`, { email, password }, { withCredentials: true });
       toast.success(res.data.message);
