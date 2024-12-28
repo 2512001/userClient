@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await axios.post(api1, { email, password }, { withCredentials: true });
+      let res = await axios.post(api, { email, password }, { withCredentials: true });
       console.log(res.data.user);
       dispatch(setUser(res.data.user))
       toast.success(res.data.message);
