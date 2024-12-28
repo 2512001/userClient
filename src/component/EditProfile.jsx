@@ -24,6 +24,7 @@ const EditProfile = () => {
     }
     try {
       let res = await axios.put(`${api}/${user._id}`, { email, password }, { withCredentials: true });
+      console.log(res.data.user);
       toast.success(res.data.message);
       dispatch(setUser(res.data.user));
       navigate(`/profile/${user._id}`);
