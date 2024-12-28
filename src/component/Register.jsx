@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { NavLink, useNavigate } from 'react-router-dom';
-const api = 'http://localhost:8000/api/users/register';
+const api = 'https://userbackend-37ha.onrender.com/api/users/register';
 import { useFormik } from 'formik';
 import { singupSchema } from '../validation/schema';
 import './regi.css';

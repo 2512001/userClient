@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import './edit.css';
 import { toast } from 'react-toastify';
-const api = 'http://localhost:8000/api/users/profile';
+const api = 'https://userbackend-37ha.onrender.com/api/users/profile';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { setUser } from "../store";
