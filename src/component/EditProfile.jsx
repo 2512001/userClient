@@ -25,7 +25,9 @@ const EditProfile = () => {
     try {
         console.log('Sending request to:', `${api}/${user._id}`);
       console.log('Request data:', { email, password });
-      let res = await axios.put(`${api}/${user._id}`, { email, password }, { withCredentials: true });
+      let res = await axios.put(`${api}/${user._id}`, { email, password },  {
+    withCredentials: true, // Ensures cookies are sent with the request
+  });
       console.log(res.data.user);
       toast.success(res.data.message);
       dispatch(setUser(res.data.user));
