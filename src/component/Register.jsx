@@ -3,6 +3,9 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { NavLink, useNavigate } from 'react-router-dom';
 const api = 'https://userbackend-37ha.onrender.com/api/users/register';
+const api2 = 'http://localhost:8000/api/users/register';
+
+
 import { useFormik } from 'formik';
 import { singupSchema } from '../validation/schema';
 import './regi.css';

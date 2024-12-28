@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 const Home = () => {
  let user = useSelector((state)=> state.user.user);
- console.log(user);
   return (
     <div className="home-container">
       <h1>Welcome to User Management App</h1>

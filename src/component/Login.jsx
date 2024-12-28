@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../store';
 
 const api = 'https://userbackend-37ha.onrender.com/api/users/login';
+const api2 = 'http://localhost:8000/api/users/login';
+
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { NavLink, useNavigate } from 'react-router-dom';
@@ -16,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await axios.post(api, { email, password }, { withCredentials: true });
+      let res = await axios.post(api1, { email, password }, { withCredentials: true });
       console.log(res.data.user);
       dispatch(setUser(res.data.user))
       toast.success(res.data.message);
