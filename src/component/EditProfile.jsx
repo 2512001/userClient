@@ -23,6 +23,8 @@ const EditProfile = () => {
       return;
     }
     try {
+        console.log('Sending request to:', `${api}/${user._id}`);
+      console.log('Request data:', { email, password });
       let res = await axios.put(`${api}/${user._id}`, { email, password }, { withCredentials: true });
       console.log(res.data.user);
       toast.success(res.data.message);
